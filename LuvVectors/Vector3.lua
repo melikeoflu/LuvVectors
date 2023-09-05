@@ -189,7 +189,7 @@ end;
 
 function Vector3:Angle(v2, axis)
     local cos = self:Dot(v2) / (self:Magnitude() / v2:Magnitude());
-    local angle = math.acos(math.min(1, math.max(-1, cos)))
+    local angle = math.acos(math.min(1, math.max(-1, cos)));
 
     if (axis) then
         if (axis:Dot(axis:Cross(self, v2)) < 0) then
